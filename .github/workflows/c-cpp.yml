@@ -1,0 +1,20 @@
+name:  CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+     
+    - uses: actions/checkout@v3
+    - name: docker_build
+      run: |
+        docker build -t vozved_v_kvadrat .
+        mkdir logs
+        docker run vozved_v_kvadrat > logs/log.txt
+        cat logs/log.txt
+    
+    
