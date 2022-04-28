@@ -9,4 +9,4 @@ RUN cmake --build _build --target install
 ENV LOG_PATH /home/logs/log.txt
 VOLUME /home/logs
 WORKDIR _install/bin
-ENTRYPOINT ./demo
+ENTRYPOINT ./prog
