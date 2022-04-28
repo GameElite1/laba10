@@ -11,3 +11,4 @@ include_directories(./bibl)
 add_subdirectory(./kvadrat kvadrat)
 
 target_link_libraries(prog kvadrat)
+install(TARGETS prog RUNTIME DESTINATION bin)
